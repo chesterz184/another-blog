@@ -1,0 +1,14 @@
+extends ./layout
+
+block title
+	title User
+
+block style
+	style.
+		body {
+			padding: 50px;
+			font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+		}
+block content
+	h1 #{name.toUpperCase()}
+	p hello, #{name}
