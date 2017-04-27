@@ -3,7 +3,7 @@
 		.ui.floating.dropdown.button
 			i.icon.bars
 			.menu
-				if #{user}
+				if user
 					a.item(href="/posts?author=#{user.id}") 个人主页
 					.divider
 					a.item(href="/posts/create") 发表文章
