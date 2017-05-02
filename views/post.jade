@@ -1,7 +1,6 @@
 extends ./layout
 
 block content
-	each post in posts
-		+post-component(post)
+	+post-component(post)
 
 include ./components/post-component

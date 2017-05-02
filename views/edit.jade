@@ -1,0 +1,16 @@
+extends ./layout
+
+block content
+	.ui.grid
+		.four.wide.column
+			a.avatar(href="/posts?author=#{user._id}", data-title="#{user.name}", data-content="#{user.bio}")
+				img.avatar(src="/img/#{user.avatar}")
+		.eight.wide.column
+			form.ui.form.segment(method="post", action="/posts/#{post._id}/edit")
+				.field.required
+					label 标题
+					input(type="text", name="title", value="#{post.title}")
+				.field.required
+					label 内容
+					textarea(name="content", rows="15") #{post.content}
+				input.ui.button(type="submit", value="发布")
